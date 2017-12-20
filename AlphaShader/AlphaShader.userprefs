@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Shader\AlphaBlend\AlphaBlend.shader">
+    <Files>
+      <File FileName="Assets\Shader\AlphaTest\AlphaTest.shader" Line="27" Column="18" />
+      <File FileName="Assets\Shader\AlphaBlendZWrite\AlphaBlendZWrite.shader" Line="1" Column="1" />
+      <File FileName="Assets\Shader\AlphaBlend\AlphaBlend.shader" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

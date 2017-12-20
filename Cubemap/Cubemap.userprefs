@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Shader\10-1-4\New Folder\Chapter10-Refraction.shader">
+    <Files>
+      <File FileName="Assets\Shader\10-1-4\Chapter10-Refraction.shader" Line="1" Column="1" />
+      <File FileName="Assets\Shader\Reflection\Reflection.shader" Line="1" Column="1" />
+      <File FileName="Assets\Shader\10-1-4\New Folder\Chapter10-Refraction.shader" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
