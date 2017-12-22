@@ -1,0 +1,7 @@
+1.Reflection: In the reflection process, I just need to use the direction of incident light and the direction of surface normal 
+to calculate the reflection direction. Then I use reflection direction to sample cube texture.
+
+2.When I get the refraction direction, I can use this value to sample cube texture. However, such process does not conform the 
+laws of physics. For transparent object, a more precise approach is calculating the refraction twice. One is that the 
+light enters the object, another is light comes out the object. However, the calculation process of coming out is pretty 
+difficult, so I just calucuate the light enters the object.
