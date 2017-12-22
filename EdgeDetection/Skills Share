@@ -1,0 +1,5 @@
+EdgeDection principle is using some edgedection factor to do convolution for image.
+As we all known, if adjcent pixels have some obvious difference in color, brightness, texture..., I think there is one edge 
+between those adjcent pixels. Therefore I can use some existing calculation factors to do that. And those factors usually contain 
+two direction of convolution, which is used to detect horizontal and vertical directions of edge information. When the I detect 
+edge, I will do convolution for every pixel, and I will get two direction grdient values(Gx and Gy). 
