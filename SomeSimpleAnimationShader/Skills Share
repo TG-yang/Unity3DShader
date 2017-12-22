@@ -7,3 +7,8 @@ In fragment shader at first, I used i.uv.xy and i.uv.zw to simple those textures
 channel to blend two textures. And I used the function of lerp. Finally, I used _Multoplier to multiply output color, which can 
 change brightness background.
 
+2. VertexAnimationWithShadow. In this project, at first, I calculate the amount of vertex displacement. Due to the fact that I just 
+wanted to move vextex x, I set the displacement of yzw to zero. Then I used _Frequency and _Time.y to control the frequency of 
+the sine function. In order to make different position have different displacement, I also add position component in model space and 
+multiply _InvWaveLength to control wavelength. Finally, I let the result multiply _Magnitude to control fluctation to get the final 
+displacement.
