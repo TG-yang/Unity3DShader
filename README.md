@@ -1,2 +1,16 @@
 # Unity3DShader
 Reading some Unity Shader book and implementing some shader
+
+1.Alpha Test does not need to turn off ZWrite. If a fragment's alpha less than a threshold, this fragment will be discarded. 
+Under this situation, the final result is extreme because it will become transparent or Completely opaque. 
+However, this kind of approach is pretty simple.
+
+2.Alpha Blending gets translucent results because such approach can use current fragment's alpha as blending factor and 
+this factor will blend with color value which save in color buffer to get new color. However, Alpha Blending has to turn off ZWrite, 
+which causes that we should be careful with the order of rendering. But Alpha Blending only turn off ZWrite, which means ZTest is still working.
+Consequently, When we use Alpha Blending to render a fragment, it will still compared the fragment's ZVaule and current ZValue in the z-buffer.
+If the fragment's ZValue is farther away from camera, the system will not blend it. In this situation, when an opaque object is 
+in front of an transparent object, we will render the opaque object firstly and this opaque object will shade the transparent object.
+Therefore, in Alpha Blending, z-buffer only can be read but not written.
+
+3.
