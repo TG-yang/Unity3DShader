@@ -1,0 +1,9 @@
+1. ScrollingBackground is pretty simple. We can use this skills to make many laryers of moving background and in this project I 
+realized two layers of background to move in different speed. At first, I transformed vertex from model space to clip space and then 
+I calculated those backgrouns' texture coordinates. And I used TRANSFORM_TEX to get original texture coordinates. What is more, I used 
+_Time.y to move the texture coordinates in horizontal direction, which can get scrolling effect. In addition, I saved two texture's 
+texture coordinates in the same o.uv in order to reduce interpolation register space which I used. 
+In fragment shader at first, I used i.uv.xy and i.uv.zw to simple those textures, and then I used the second layer texture's alpha 
+channel to blend two textures. And I used the function of lerp. Finally, I used _Multoplier to multiply output color, which can 
+change brightness background.
+
