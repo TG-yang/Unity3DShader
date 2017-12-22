@@ -1,0 +1,6 @@
+In this project, I wanted to prove that texture can save any surface attribute. I will use a tamp texture to control diffuse 
+reflection of light and this skill was created by Valve. I will focus on explaining how fragment shader works in this project. 
+In fragment shader, I used halfLambert model. I let normal direction and light direction make dot product, and then I  the result 
+do a 0.5 times zoom and a 0.5 moving to calculate halfLambert. And the range of halfLambert is [0,1]. Then I used halfLamber to bulid 
+a texture coordinate, and I used this coordinate to sample _RampTex. Because the _RampTex is a one-dimensional texture, halfLambert 
+is used in the texture coordinate of u and v. Then I multiplyed sampling color and material color to get the final diffuse color.
