@@ -1,0 +1,15 @@
+In this project, at first, I set rendering queue to Transparent in SubShader. The reason why I did such thing was that it ould make 
+sure when I render this object, other opaque objects ad been rendered in the screen. And I set RenderType in order that when 
+I used shader replacement, this object could be replaced correctly. Finally, I used GrabPass to define a pass which is used to 
+grab the screen image. I define a string in this pass, and this string internal name decided where the image would be save. In 
+addition, I still defined _RefractionTex and _RefractionTex_TexelSize, and those was used to state texture name. What is more, 
+after vertex coordinate transformationd, I used the ComputeGrabScreenPos Function to get the corresponding image's sampling 
+coordinations. Then I calculated _MainTex and _BumpMap sampling coordinations, and I saved them in a type of float4 variate. Beacuse
+I should transform normal direction from targent space to world space in fragment shader to make sure sample Cubemap, I should 
+calculate the corresponding TargentToWorldMatrix. Then I sampled normal map to get normal direction in targent space. I used this value 
+and Distortion, RefractionTex_TexelSize to move the screen image's sampling coordinate. This process is used as simulating refracti0on. 
+What is more, I used perspective division to get the real screen coordinate, and I also used this coordinate to sample RefractionTex to 
+simulate the refraction color. Then I transform normal direction from targent space to world space, and I could get the normal direction 
+of the reflection direction relative to the direction of the viewing angle. I used reflection direction to sample Cubemap, and 
+I could get reflection color by multiplying the result and main texture.
+Finally, I used _RefractAmount to blend refraction color and reflection color to get the final color.
