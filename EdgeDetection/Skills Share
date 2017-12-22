@@ -3,3 +3,10 @@ As we all known, if adjcent pixels have some obvious difference in color, bright
 between those adjcent pixels. Therefore I can use some existing calculation factors to do that. And those factors usually contain 
 two direction of convolution, which is used to detect horizontal and vertical directions of edge information. When the I detect 
 edge, I will do convolution for every pixel, and I will get two direction grdient values(Gx and Gy). 
+I can use the equation（1） to get final grdient value. However, the equation(1) has a poor performance because of the root, 
+therefore, I use equation(2) to get final grdient value.
+
+
+
+ G=√(〖Gx〗^2+〖Gy〗^2 )（1）
+ G=|Gx|+|Gy|(2)
