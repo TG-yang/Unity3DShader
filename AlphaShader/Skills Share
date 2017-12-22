@@ -10,4 +10,5 @@ If the fragment's ZValue is farther away from camera, the system will not blend 
 in front of an transparent object, we will render the opaque object firstly and this opaque object will shade the transparent object.
 Therefore, in Alpha Blending, z-buffer only can be read but not written.
 
-3.
+3.AlphaBlendZWrite uses two passes to render model. The first pass turn on ZWrite, but it can not output color because the pass 
+is only used to write the model's ZWrite in the z-buffer. The second pass is used to do alpha blending.
