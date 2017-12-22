@@ -1,0 +1,9 @@
+At first I get the original screen image which save in _MainTex, and then I used _Brightness to change brightness. This process 
+is pretty simple since I just need to let original color be multiplied by _Brightness. Moreover, I calculate pixel brightness though 
+multiplying each color component by a certain factor and then add all the component to get the final result.
+
+I use birghtness to create saturation value and this value I set to 0. In addition, I use _Saturatuin to do calculus of interpolation 
+with the result of the previous step. I can use such process to get the perfect saturation color.
+
+I create contrast value and this value I set to 0, I use _Contrast to do calculus of interpolation with the result of 
+the previous step. I can use such process to get the perfect result.
