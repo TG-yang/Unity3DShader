@@ -1,0 +1,10 @@
+In the normal map, it saves surface normal direction. Beacuse of the fact that the normal direction is in the range of [-1,1] and 
+the pixel component range is [0,1], I have to do some mapping which is the equation (1). So normal = pixel*2 -1.
+In my project, I calculated lighting model in the targent space. In fragment frag shader, I use texture sampling to get the the normal in 
+tangent space. Then I will calculate it with view direction, lighting direction in the targent space to get the final lighting result.
+Consequently, at first, I will transform view direction, lighting direction from model space to targent space in vertex shader, 
+which means that I need ModelToTargentMatrix and its inverse matrix is TargentToModelMatrix. As we all known, TargentToModelMatrix 
+is pretty easy to get.
+
+
+pixel=  (normal+1)/2 (1)
