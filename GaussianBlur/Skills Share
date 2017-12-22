@@ -1,0 +1,11 @@
+As we all known, there are many approach to realize blur, like Mean blur, Median blur. In this project, I use Gaussian Blur to 
+realize the blur. And equation(1) is Gaussian Equation. This euqation can simulate the influence of. This equation well simulates 
+the degree of influence of neighboring pixels on the current pixel pair. The closer the distance, the greater the impact. 
+The higher the dimensionality of the equation, the greater the degree of ambiguity. 
+In this project, I used 5x5 Gaussian kernel to process the image. I will use two passes and in the first pass,
+I use a vertical one-dimensional Gaussian kernel to filter the image. In the second pass, I use a horizontal one-dimensional 
+Gaussian kernel to filter the image. Then I will get the final image. What is more, I use image scaling to further improve 
+performance. By adjusting the number of applications of Gaussian filter to control the degree of blur. 
+
+
+G(x,y)=1/(2πσ^2 ) ℮^((x^2+y^2)/(2σ^2 ))(1)
